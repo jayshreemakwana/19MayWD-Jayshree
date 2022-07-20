@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <table border="4" align="center" height="550px" >
+        <tr>
+            <th bgcolor="lightgrey">Name</th>
+            <th bgcolor="lightgrey">Type</th>
+            <th colspan="3" bgcolor="lightgrey">Description</th></tr>
+            
+            <tr>
+                <td rowspan="2">d_super</td>
+                <td rowspan="2">struct disk_superblock</td>
+               
+               
+                </tr>
+                
+            <th colspan="3">
+                <table border="3" align="center" >
+                    <tr>
+                    <th bgcolor="lightgrey">Name</th>
+                    <th bgcolor="lightgrey">Type</th>
+                    <th bgcolor="lightgrey">Description</th>
+                    </tr>
+                    <tr>
+                        <td >magic</td>
+                        <td>char-array</td>
+                        <td>Magic number used <br> to indicate if file <br> system is generated <br> by our OS
+        
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>ninodes</td>
+                        <td>short</td>
+                        <td>Number of I-nodes <br> in the file system</td>
+                    </tr>
+                    <tr>
+                        <td>ndata_biks</td>
+                        <td>short</td>
+                        <td>The amount of data <br> bloks in our file <br> system</td>
+                    </tr>
+                    <tr>
+                        <td>root_biks</td>
+                        <td>short</td>
+                        <td>Blok number of root <br>I-node</td>
+                    </tr>
+                    <tr>
+                    <td>max_filesize</td>
+                    <td>short</td>
+                    <td>We limit the size to <br> 4KB or 8 sectors <br> (8 direct pointers) </td>
+                    </tr>
+                </table>
+               
+            </th>
+                <tr>
+            <td>ibmap</td>
+            <td>void*</td>
+            <td>pointer to I-node bitmap</td>
+            </tr>
+            <tr>
+                <td>dbmap</td>
+                <td>void*</td>
+                <td>pointer to data block bitmap</td>
+            </tr>
+            <tr>
+                <td>dirty</td>
+                <td>char</td>
+                <td>If set the struc has been changed and need to be <br> written back to a persistent disk</td>
+            </tr>
+        
+      
+       
+    </table>
+</body>
+</html>
